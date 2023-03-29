@@ -1,0 +1,35 @@
+.App {
+  --header_height: 60px;
+  max-width: 1200px;
+  margin: 20px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hw {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  min-height: 200px;
+  background: var(--color-surface-1);
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.hwTitle {
+  font-weight: bold;
+  color: #121215;
+  font-size: 20px;
+  border: 1px solid #9464c4;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 5px;
+  background: var(--color-surface-2);
+}
