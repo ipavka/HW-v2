@@ -100,27 +100,29 @@ const HW15 = () => {
   return (
     <div id={'hw15'}>
       <div className={s2.hwTitle}>Homework #15</div>
-      {idLoading && <Loader customMainStyle={s.spinnerStyle} />}
-      <div className={idLoading ? s.hw15Wrapper : ''}>
-        <div className={s2.hw}>
-          <SuperPagination
-            page={page}
-            isLoading={idLoading}
-            itemsCountForPage={count}
-            totalCount={totalCount}
-            onChange={onChangePagination}
-          />
-          <div className={s.rowHeader}>
-            <div className={s.techHeader}>
-              tech
-              <SuperSort sort={sort} value={'tech'} onChange={onChangeSort} />
+      <div className={s.hw15Wrapper}>
+        {idLoading && <Loader customMainStyle={s.spinnerStyle} />}
+        <div className={idLoading ? s.opacity : ''}>
+          <div className={s2.hw}>
+            <SuperPagination
+              page={page}
+              isLoading={idLoading}
+              itemsCountForPage={count}
+              totalCount={totalCount}
+              onChange={onChangePagination}
+            />
+            <div className={s.rowHeader}>
+              <div className={s.techHeader}>
+                tech
+                <SuperSort sort={sort} value={'tech'} onChange={onChangeSort} />
+              </div>
+              <div className={s.developerHeader}>
+                developer
+                <SuperSort sort={sort} value={'developer'} onChange={onChangeSort} />
+              </div>
             </div>
-            <div className={s.developerHeader}>
-              developer
-              <SuperSort sort={sort} value={'developer'} onChange={onChangeSort} />
-            </div>
+            {mappedTechs}
           </div>
-          {mappedTechs}
         </div>
       </div>
     </div>
